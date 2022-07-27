@@ -34,8 +34,8 @@ void teaSort(Tea head) {// 排序过程
             if (p->num > q->num) {
                 // 交换内容
                 Tea tmp = p;
-                p = q;
-                q = tmp;
+                *p = *q;
+                *q = *tmp;
                 // 交换next指针
                 Tea tmpnext = q->next;
                 q->next = p->next;
@@ -69,18 +69,21 @@ void print(Tea pTeacher) {
         printf("%d %d %s %d\n",  p->num, p->sex, p->name, p->year);
         p = p->next;
     }
+    printf("\n");
 }
 
 void build(Tea head) {
     FILE *fp = fopen("C:\\Users\\98708\\Desktop\\algorithm\\JiLinUniversity966\\2019966\\input.txt", "r"); //打开文件
     Tea q = head;
-    if (fp == NULL) { printf("文件打开错误");}
-    while(1){
+    if (fp == NULL) {
+        printf("文件打开错误\n");
+    }
+    while(feof(fp) == 0){//判断是否读到文件尾
         Tea p = (Tea) malloc(sizeof(teacher));
-        fscanf(fp, "%d %d %s %d", &p->num, &p->sex, &p->name, &p->year);// 读入数据
+        fscanf(fp, "%d %d %s %d\n", &p->num, &p->sex, p->name, &p->year);// 读入数据
         q->next = p; // 接入链表
         q = p;
-        if (!feof(fp)) break;//判断是否读到文件尾
+//        fflush(stdin);
     }
     q->next = NULL; // 建立链表尾
 }

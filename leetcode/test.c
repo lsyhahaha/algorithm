@@ -1,35 +1,30 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <math.h>
+#include "stdio.h"
+#include "stdlib.h"
+#include "stdbool.h" // 加入了bool类型
 
-typedef struct node
-{
-    int data;
-    struct node *LLink,*RLink;
-    int Freq;
-}* List;
+struct TreeNode {
+    int val;
+    struct TreeNode *left;
+    struct TreeNode *right;
+};//二叉树
 
-void locate(List L, int x)
-{
-    List p=L->RLink,q;
-    while(p!=NULL){
-        if(p->data==x){
-            p->Freq++;
-            break;
-        }
-        p=p->RLink;
+
+struct Node {
+    int val;
+    int numChildren;
+    struct Node** children;
+};// N叉树
+
+int maxDepth(struct Node* root) {
+    if (!root) return 0;
+
+    int max_depth = 0;
+    int n = root->numChildren;
+
+    for (int i = 0; i < n; i++) {
+        max_depth = fmax(max_depth, maxDepth(root->children[i]));
     }
-    if(p->LLink==L)return;//如果p是第一个结点则不处理
-    else{
-        p->LLink->RLink=p->RLink;//将p去除
-        if(p->RLink!=NULL)
-            p->RLink->LLink=p->LLink;
-        q=L->RLink;//找到p的插入位置
-        while(q!=NULL&&q->Freq>p->Freq){
-            q=q->RLink;
-        }
-        q->LLink->RLink=p;//p插入到q之前
-        p->LLink=q->LLink;
-        q->LLink=p;
-        p->RLink=q;
-    }
+
+    return max_depth + 1;
 }

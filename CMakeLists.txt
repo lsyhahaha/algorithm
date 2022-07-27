@@ -18,6 +18,15 @@ add_executable(2_2_6 JiLinUniversity966/highlevel/unit2/2_2_6/lt.c)
 add_executable(2_2_7 JiLinUniversity966/highlevel/unit2/2_2_7/lt.c)
 
 # 高级程序设计
+#2020
 add_executable(2020966 JiLinUniversity966/2020966/solution4.cpp)
+#2019
 add_executable(2019966 JiLinUniversity966/2019966/solution3.cpp)
+#2018
+add_executable(2018966 JiLinUniversity966/2018966/solution4.c)
+#2017
+add_executable(2017966 JiLinUniversity966/2017966/solution3.c)
+#2016
+add_executable(2016966 JiLinUniversity966/2016966/solution4.c)
+
 add_executable(leetcode leetcode/test.c)
