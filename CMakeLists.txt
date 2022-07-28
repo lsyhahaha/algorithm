@@ -28,5 +28,9 @@ add_executable(2018966 JiLinUniversity966/2018966/solution4.c)
 add_executable(2017966 JiLinUniversity966/2017966/solution3.c)
 #2016
 add_executable(2016966 JiLinUniversity966/2016966/solution4.c)
+#2015
+add_executable(2015966 JiLinUniversity966/2015966/solution4.c)
+#2014
+add_executable(2014966 JiLinUniversity966/2014966/solution4.c)
 
 add_executable(leetcode leetcode/test.c)
