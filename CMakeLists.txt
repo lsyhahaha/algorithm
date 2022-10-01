@@ -3,11 +3,12 @@ project(algorithm)
 
 set(CMAKE_CXX_STANDARD 11)
 
+
 #TOOL
-add_executable(array TOOL/array/LinJieJuZhen.c)
+add_executable(array TOOL/char/solution2.cpp)
 
 #王道
-add_executable(XianXingBiao JiLinUniversity966/XianXingBiao/solution1_4.c)
+add_executable(00006 WDAlgorithm/00006/1solution4.cpp)
 
 #2019 941
 add_executable(2019941 JiLinUniversity941/2019941/solution1.cpp)
