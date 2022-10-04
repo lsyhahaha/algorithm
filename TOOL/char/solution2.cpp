@@ -9,29 +9,27 @@ using namespace std;
 
 class Solution {
 public:
-    int longestValidParentheses(string s) {
-        int maxans = 0;
-        stack<int> stk; // 栈
-        stk.push(-1); // 入栈 -1
-        for (int i = 0; i < s.length(); i++) {
-            if (s[i] == '(') {
-                stk.push(i);
-            } else {
-                stk.pop();
-                if (stk.empty()) {
-                    stk.push(i);
-                } else {
-                    maxans = max(maxans, i - stk.top());
-                }
-            }
+    int findJudge(int n, vector<vector<int>>& trust) {
+        // 小镇法官的度为n-1
+        vector<int> degrees(n + 1);
+        int people = 0;
+        for(int i = 0; i < n; i++){
+            people = trust[i][1];
+            degrees[people]++;
         }
-        return maxans;
+
+        for(int i = 0; i < n; i++){
+            if(degrees[i] == n-1) return i;
+        }
+
+        return -1;
     }
 };
 
 int main(){
-    Solution s = Solution();
-    int n = s.longestValidParentheses(")()(()()))");
-    cout << n;
+    Solution a = Solution();
+    vector<vector<int>> trust = {{1,2}};
+    cout << a.findJudge(2, trust);
+
     return 0;
 }
