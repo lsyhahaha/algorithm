@@ -26,6 +26,8 @@ add_executable(2017979 JiLinUniversity979/2017979/solution1.cpp)
 
 #2022 967
 add_executable(2022967 JiLinUniversity967/2022967/solution6.cpp)
+#2021 967
+add_executable(2021967 JiLinUniversity967/2021967/solution2.cpp)
 #2019 967
 add_executable(2019967 JiLinUniversity967/2019967/solution5.cpp)
 #2018 967

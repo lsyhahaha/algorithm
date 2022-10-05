@@ -2,11 +2,11 @@
 using namespace std;
 #define N 100
 
-//typedef struct Node{//定义二叉树的存储结构
-//    int data;
-//    struct Node* left;
-//    struct Node* right;
-//}Node,*Tree;
+/*typedef struct Node{//定义二叉树的存储结构
+    int data;
+    struct Node* left;
+    struct Node* right;
+}Node,*Tree;*/
 
 /*typedef struct Node{ // 定义单链表的存储结构
     int data;
