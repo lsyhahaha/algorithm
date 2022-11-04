@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 11)
 #TOOL
 add_executable(array TOOL/char/solution2.cpp)
 
-#王道
+#王道 WDAlgorithm
 add_executable(00006 WDAlgorithm/00006/1solution4.cpp)
 
 #2019 941
@@ -53,3 +53,7 @@ add_executable(2016966 JiLinUniversity966/2016966/solution4.c)
 add_executable(2015966 JiLinUniversity966/2015966/solution4.c)
 #2014 966
 add_executable(2014966 JiLinUniversity966/2014966/solution4.c)
+
+#CandCPP
+add_executable(base CandCPP/base/solution195_14.c)
+add_executable(ds50score CandCPP/ds50score/solution83_kmp.cpp)
