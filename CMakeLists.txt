@@ -55,5 +55,5 @@ add_executable(2015966 JiLinUniversity966/2015966/solution4.c)
 add_executable(2014966 JiLinUniversity966/2014966/solution4.c)
 
 #CandCPP
-add_executable(base CandCPP/base/solution195_14.c)
+add_executable(base CandCPP/base/solution61_2.c)
 add_executable(ds50score CandCPP/ds50score/solution83_kmp.cpp)
