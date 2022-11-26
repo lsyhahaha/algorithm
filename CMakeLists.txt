@@ -3,6 +3,16 @@ project(algorithm)
 
 set(CMAKE_CXX_STANDARD 11)
 
+#学习STL库
+add_executable(STL STL/learn_vector.cpp)
+
+#湖南师范大学
+add_executable(2022 HNShiFan/2022/solution1.cpp)
+
+#湖南大学
+
+#王道
+add_executable(WangDaoP18 HNuniversity866/WangDaoP18/solution2.cpp)
 
 #TOOL
 add_executable(array TOOL/char/solution2.cpp)
